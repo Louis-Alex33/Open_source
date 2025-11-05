@@ -1,63 +1,68 @@
-Git Commands
-============
+# Commandes Git (Version Française)
 
-### Getting & Creating Projects
+---
 
-| Command | Description |
-| ------- | ----------- |
-| `git init` | Initialize a local Git repository |
-| `git clone ssh://git@github.com/[username]/[repository-name].git` | Create a local copy of a remote repository |
+## Obtenir & Créer des projets
+| Commande | Description |
+|----------|-------------|
+| `git init` | Initialiser un dépôt Git local |
+| `git clone ssh://git@github.com/[username]/[repository-name].git` | Créer une copie locale d’un dépôt distant |
 
-### Basic Snapshotting
+---
 
-| Command | Description |
-| ------- | ----------- |
-| `git status` | Check status |
-| `git add [file-name.txt]` | Add a file to the staging area |
-| `git add -A` | Add all new and changed files to the staging area |
-| `git commit -m "[commit message]"` | Commit changes |
-| `git rm -r [file-name.txt]` | Remove a file (or folder) |
-| `git remote -v` | View the remote repository of the currently working file or directory |
+## Instantanés de base (Basic Snapshotting)
+| Commande | Description |
+|----------|-------------|
+| `git status` | Vérifier le statut |
+| `git add [nom-du-fichier.txt]` | Ajouter un fichier à l’index (staging area) |
+| `git add -A` | Ajouter tous les fichiers nouveaux ou modifiés à l’index |
+| `git commit -m "[message de commit]"` | Valider les changements |
+| `git rm -r [nom-du-fichier.txt]` | Supprimer un fichier (ou un dossier) |
+| `git remote -v` | Voir le dépôt distant du fichier ou répertoire courant |
 
-### Branching & Merging
+---
 
-| Command | Description |
-| ------- | ----------- |
-| `git branch` | List branches (the asterisk denotes the current branch) |
-| `git branch -a` | List all branches (local and remote) |
-| `git branch [branch name]` | Create a new branch |
-| `git branch -d [branch name]` | Delete a branch |
-| `git push origin --delete [branch name]` | Delete a remote branch |
-| `git checkout -b [branch name]` | Create a new branch and switch to it |
-| `git checkout -b [branch name] origin/[branch name]` | Clone a remote branch and switch to it |
-| `git branch -m [old branch name] [new branch name]` | Rename a local branch |
-| `git checkout [branch name]` | Switch to a branch |
-| `git checkout -` | Switch to the branch last checked out |
-| `git checkout -- [file-name.txt]` | Discard changes to a file |
-| `git merge [branch name]` | Merge a branch into the active branch |
-| `git merge [source branch] [target branch]` | Merge a branch into a target branch |
-| `git stash` | Stash changes in a dirty working directory |
-| `git stash clear` | Remove all stashed entries |
-| `git stash pop` | Apply latest stash to working directory |
+## Branches & Fusion (Branching & Merging)
+| Commande | Description |
+|----------|-------------|
+| `git branch` | Lister les branches (l’astérisque indique la branche active) |
+| `git branch -a` | Lister toutes les branches (locales et distantes) |
+| `git branch [nom de la branche]` | Créer une nouvelle branche |
+| `git branch -d [nom de la branche]` | Supprimer une branche locale |
+| `git push origin --delete [nom de la branche]` | Supprimer une branche distante |
+| `git checkout -b [nom de la branche]` | Créer une nouvelle branche et y basculer |
+| `git checkout -b [nom de la branche] origin/[nom de la branche]` | Cloner une branche distante et y basculer |
+| `git branch -m [ancien nom] [nouveau nom]` | Renommer une branche locale |
+| `git checkout [nom de la branche]` | Basculer vers une branche |
+| `git checkout -` | Revenir à la branche précédemment utilisée |
+| `git checkout -- [nom-du-fichier.txt]` | Annuler les modifications d’un fichier |
+| `git merge [nom de la branche]` | Fusionner une branche dans la branche active |
+| `git merge [branche source] [branche cible]` | Fusionner une branche dans une branche cible |
+| `git stash` | Mettre de côté les modifications en cours |
+| `git stash clear` | Supprimer toutes les entrées mises de côté |
+| `git stash pop` | Appliquer la dernière mise de côté dans le répertoire de travail |
 
-### Sharing & Updating Projects
+---
 
-| Command | Description |
-| ------- | ----------- |
-| `git push origin [branch name]` | Push a branch to your remote repository |
-| `git push -u origin [branch name]` | Push changes to remote repository (and remember the branch) |
-| `git push` | Push changes to remote repository (remembered branch) |
-| `git push origin --delete [branch name]` | Delete a remote branch |
-| `git pull` | Update local repository to the newest commit |
-| `git pull origin [branch name]` | Pull changes from remote repository |
-| `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Add a remote repository |
-| `git remote set-url origin ssh://git@github.com/[username]/[repository-name].git` | Set a repository's origin branch to SSH |
+## Partager & Mettre à jour des projets (Sharing & Updating Projects)
+| Commande | Description |
+|----------|-------------|
+| `git push origin [nom de la branche]` | Envoyer une branche vers le dépôt distant |
+| `git push -u origin [nom de la branche]` | Envoyer les changements et mémoriser la branche distante |
+| `git push` | Envoyer les changements sur la branche mémorisée |
+| `git push origin --delete [nom de la branche]` | Supprimer une branche distante |
+| `git pull` | Mettre à jour le dépôt local avec le dernier commit |
+| `git pull origin [nom de la branche]` | Récupérer les changements depuis le dépôt distant |
+| `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Ajouter un dépôt distant |
+| `git remote set-url origin ssh://git@github.com/[username]/[repository-name].git` | Définir l’URL SSH pour le dépôt distant |
 
-### Inspection & Comparison
+---
 
-| Command | Description |
-| ------- | ----------- |
-| `git log` | View changes |
-| `git log --summary` | View changes (detailed) |
-| `git log --oneline` | View changes (briefly) |
-| `git diff [source branch] [target branch]` | Preview changes before merging |
+## Inspection & Comparaison
+| Commande | Description |
+|----------|-------------|
+| `git log` | Voir l’historique des changements |
+| `git log --summary` | Voir les changements en détail |
+| `git log --oneline` | Voir les changements de façon concise |
+| `git diff [branche source] [branche cible]` | Prévisualiser les changements avant fusion |
+
