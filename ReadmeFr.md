@@ -6,7 +6,6 @@
 
 | Commande | Description |
 |----------|-------------|
-
 | `g` | git 
 | `st` | status 
 | `co` | checkout 
