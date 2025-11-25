@@ -12,6 +12,8 @@
 | `ci` | commit 
 | `pu` | push 
 | `br` | branch
+| `gst`| git status
+| `ga` | git add .
 
 ## Obtenir & Créer des projets
 | Commande | Description |
